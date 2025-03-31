@@ -9,6 +9,8 @@ app.post("/courses", async (request: Request, response: Response) => {
 
   // para inserir o name no banco de dados
   await knex("courses").insert({ name });
+  //mesma coisa usando SQL
+  //await knex.raw("INSERT INTO courses (name) VALUES (?)", [name]);
 
   response.status(201).json({ name });
 });
