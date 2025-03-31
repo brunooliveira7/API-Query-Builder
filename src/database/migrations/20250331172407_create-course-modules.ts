@@ -1,11 +1,15 @@
 import type { Knex } from "knex";
 
 export async function up(knex: Knex): Promise<void> {
-  await knex.schema.createTable("courses_modules", (table) => {
+  await knex.schema.createTable("course_modules", (table) => {
     table.increments("id").primary();
     table.text("name").notNullable();
     //coluna de chave estrangeira - relacionar com a tabela de cursos
-    table.integer("course_id").references("id").inTable("courses");
+    table
+      .integer("course_id")
+      .notNullable()
+      .references("id")
+      .inTable("courses");
   });
 }
 
