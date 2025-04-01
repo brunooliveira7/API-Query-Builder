@@ -62,4 +62,23 @@ app.get("/modules", async (request: Request, response: Response) => {
   return response.json(modules);
 });
 
+//rota para conectar as tabelas
+app.get(
+  "/courses/:id/modules",
+  async (request: Request, response: Response) => {
+    const courses = await knex("courses")
+      //renomeando a colunas - mostra o nome do curso e o nome do modulo
+      .select(
+        "courses.id AS course_id",
+        "course_modules.id AS course_module_id",
+        "course_modules.name AS module",
+        "courses.name AS course"
+      )
+      //conectando a chave primaria da tabela (courses.id) com a chave estrangeira da tabela (course_modules)
+      .join("course_modules", "courses.id", "course_modules.course_id");
+
+    return response.json(courses);
+  }
+);
+
 app.listen(3333, () => console.log(`Server is running on port 3333`));
