@@ -10,18 +10,11 @@ A **API Query Builder** foi desenvolvida como `Node.js` e `TypeScript`, com foco
 
 A aplicação se conecta a um banco de dados relacional, cuja estrutura foi modelada e visualizada por meio do **Beekeeper Studio**. Foram implementados relacionamentos entre tabelas utilizando **chaves primárias** e **chaves estrangeiras**, respeitando a integridade referencial.
 
-O diagrama disponível no repositório demonstra claramente a estrutura lógica do banco, incluindo tabelas como:
-
-- `users`
-- `tasks`
-- `projects`
-- entre outras...
-
 Essas tabelas estão relacionadas por meio de vínculos como:
 
-- Um usuário pode ter várias tarefas (relação 1:N).
-- Um projeto pode agrupar várias tarefas.
-- As tarefas referenciam o ID do usuário e do projeto como chaves estrangeiras.
+- Um usuário pode ter vários cursos (relação 1:N).
+- Um curso pode agrupar vários assunto.
+- As cursos referenciam o ID do usuário e os assuntos com o uso de chaves estrangeiras.
 
 ---
 
