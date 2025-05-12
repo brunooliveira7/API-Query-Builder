@@ -1,3 +1,5 @@
+## API REST
+
 ## 📝 Sobre a Aplicação
 
 A **API Query Builder** foi desenvolvida como `Node.js` e `TypeScript`, com foco na construção de uma base sólida para integração com bancos de dados relacionais.
