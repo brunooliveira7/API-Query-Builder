@@ -33,6 +33,7 @@ Essas tabelas estão relacionadas por meio de vínculos como:
 
 O principal objetivo desta aplicação é **praticar a integração entre o backend em Node.js e bancos de dados relacionais**, aplicando boas práticas de modelagem, validação e estruturação de APIs modernas e escaláveis.
 
+---
 
 <p align="center">
   <img alt="License" src="https://github.com/brunooliveira7/API-Query-Builder/blob/main/assets/Query%20Builder.png">
